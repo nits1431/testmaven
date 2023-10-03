@@ -11,7 +11,6 @@ pipeline{
         }
         stage("Maven Build"){
             steps{
-                cd "mvndemo"
                 bat 'mvn clean package'
             }
         }
