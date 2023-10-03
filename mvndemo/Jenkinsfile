@@ -6,7 +6,7 @@ pipeline{
   stages{
         stage("SCM Checkout"){
             steps{
-              git 'https://github.com/nits1431/testmaven.git'
+              git 'https://github.com/nits1431/testmaven'
             }
         }
         stage("Maven Build"){
