@@ -1,9 +1,18 @@
-node{
-  stage('SCM Checkout'){
-    git 'https://github.com/nits1431/testmaven'
+pipeline{
+  agent any
+  tools{
+      maven 'Maven'
   }
-  stage('Compile Package'){
-    def mvnHome = tool name: 'maven', type: 'maven'
-    sh '${mvnHome}/bin/mvn package'
-  }
+  stages{
+        stage("SCM Checkout"){
+            steps{
+              git 'https://github.com/nits1431/testmaven.git'
+            }
+        }
+        stage("Maven Build"){
+            steps{
+                bat 'mvn clean package'
+            }
+        }
+    }
 }
