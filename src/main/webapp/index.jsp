@@ -1,6 +1,6 @@
 <html>
 <body>
-<h2>Hello Nitesh !!</h2>
-<h3>Today is Tuesday.....................</h3>
+<h1>Hello Nitesh !!</h1>
+<h3>You love ruby.....</h3>
 </body>
 </html>
